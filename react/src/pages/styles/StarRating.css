@@ -1,0 +1,23 @@
+.starRating__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.starGroup__container {
+    display: flex;
+}
+
+.star__container::after {
+    content: '★';
+    font-size: 48px;
+}
+
+.star__container.hover, .star__container.selected {
+    color: #ffcb00;
+}
+
+.starCount__container {
+    margin-left: 8px;
+    font-size: 20px;
+}
