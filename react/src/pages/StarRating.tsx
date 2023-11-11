@@ -1,10 +1,18 @@
-import React, { useState } from "react";
+import React, { useMemo, useState } from "react";
 
 import "./styles/StarRating.css";
 
 const StarRating = ({ total = 5, rating }: Props): React.ReactElement => {
   const [hoverIdx, setHoverIdx] = useState<number>(0);
   const [selectedIdx, setSelectedIdx] = useState<number | undefined>(rating);
+  const starRatingArr = useMemo(
+    () =>
+      Array.from({
+        length: total,
+      }),
+
+    [total]
+  );
 
   const handleMouseOver = (index: number): void => {
     setHoverIdx(index);
@@ -21,18 +29,14 @@ const StarRating = ({ total = 5, rating }: Props): React.ReactElement => {
   return (
     <div className="starRating__container">
       <div className="starGroup__container">
-        {[
-          ...Array.from({
-            length: total,
-          }),
-        ].map((_, index) => {
+        {starRatingArr.map((_, index) => {
           const currentIdx = index + 1;
           const selectedClass =
             currentIdx <= Number(selectedIdx) ? "selected" : "";
           const hoverClass =
             hoverIdx !== null && currentIdx <= Number(hoverIdx) ? "hover" : "";
           return (
-            <div
+            <span
               key={currentIdx}
               className={`star__container ${selectedClass} ${hoverClass}`}
               onMouseOver={() => handleMouseOver(currentIdx)}
