@@ -46,10 +46,10 @@
     _seconds = 0;
     _minutes = 0;
     _hours = 0;
-    milliSeconds.innerText = '00';
-    seconds.innerText = '00';
-    minutes.innerText = '00';
-    hours.innerText = '00';
+    milliSeconds.innerText = "00";
+    seconds.innerText = "00";
+    minutes.innerText = "00";
+    hours.innerText = "00";
   }
 
   function displayButtons(displayStart, displayStop) {
@@ -72,7 +72,8 @@
           }
         }
       }
-      milliSeconds.innerText = _milliSeconds < 10 ? `0${_milliSeconds}` : _milliSeconds;
+      milliSeconds.innerText =
+        _milliSeconds < 10 ? `0${_milliSeconds}` : _milliSeconds;
       seconds.innerText = _seconds < 10 ? `0${_seconds}` : _seconds;
       minutes.innerText = _minutes < 10 ? `0${_minutes}` : _minutes;
       hours.innerText = _hours < 10 ? `0${_hours}` : _hours;

@@ -1,0 +1,28 @@
+.stopwatch__clockContainer, .stopwatch__btnContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.stopwatch__lbl {
+  padding-right: 10px;
+  padding-bottom: 12px;
+  align-self: end;
+  font-size: 24px;
+}
+
+.stopwatch__count {
+  font-size: 64px;
+}
+
+.stopwatch__milliSeconds {
+  padding-right: 10px;
+  padding-bottom: 6px;
+  align-self: end;
+  font-size: 40px;
+}
+
+.stopwatch__btnContainer {
+    margin-top: 32px;
+    gap: 8px;
+}
