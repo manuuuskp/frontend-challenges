@@ -1,0 +1,31 @@
+.accordion__container {
+    box-shadow: 10px 10px 10px #f1f1f1;
+    border: 1px solid #d8d8d8;
+}
+
+.accordion__summary {
+    cursor: pointer;
+}
+
+.accordion__summary {
+    padding-left: 10px;
+}
+
+.accordion__details {
+    min-height: 0;
+    transition: max-height 500ms ease;
+}
+
+.accordion__details.close {
+    overflow: hidden;
+    max-height: 0px;
+}
+
+.accordion__pcontainer > p{
+    margin: 0;
+    padding: 10px;
+}
+
+.accordion__details.open {
+    max-height: 500px;
+}
